@@ -1,0 +1,29 @@
+syntax = 'proto3';
+
+package Auth;
+
+service AuthService {
+  rpc createSession(CreateSessionRequest) returns (CreateSessionResponse);
+  rpc getSessionPayload(GetSessionPayloadRequest) returns (GetSessionPayloadResponse);
+}
+
+message CreateSessionRequest {
+  string name = 1;
+}
+
+message CreateSessionResponse {
+  string jwt = 1;
+}
+
+message GetSessionPayloadRequest {
+  string jwt = 1;
+}
+
+message GetSessionPayloadResponse {
+  message User {
+    string id = 1;
+    string name = 2;
+  };
+
+  User user = 1;
+}
