@@ -1,0 +1,32 @@
+syntax = 'proto3';
+
+package Products;
+
+service ProductsService {
+  rpc listProducts(Void) returns (ListProductsResponse);
+  rpc updateProduct(UpdateProductRequest) returns (UdateProductResponse);
+}
+
+message Void {}
+
+message Product {
+  string id = 1;
+  string name = 2;
+  int32 amount = 3;
+}
+
+message ListProductsResponse {
+  repeated Product products = 1;
+}
+
+message UpdateProductRequest {
+  message UpdateProductData {
+    int32 amount = 1;
+  }
+  string id = 1;
+  UpdateProductData data = 2;
+}
+
+message UdateProductResponse {
+  Product product = 1;
+}
