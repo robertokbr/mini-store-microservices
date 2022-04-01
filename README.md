@@ -14,4 +14,4 @@
 ```
 
 ### How to use 🎮
-- Open http://localhost:3000/api
+- Open http://localhost:3000/api to watch the API documentation
