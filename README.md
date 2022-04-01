@@ -1,4 +1,7 @@
 # Mini-Store 🛒
+
+<image src="https://github.com/robertokbr/mini-store-microservices/blob/main/.github/flow.png" />
+
 ### How to run 🏃
 - auth-api
 ```bash
