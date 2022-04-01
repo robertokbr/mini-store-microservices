@@ -12,3 +12,6 @@
 ```bash
   cd purchases-api && npm run start:dev
 ```
+
+### How to use 🎮
+- Open http://localhost:3000/api
